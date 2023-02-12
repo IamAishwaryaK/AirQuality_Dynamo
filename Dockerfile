@@ -1,4 +1,4 @@
-FROM openjdk:11-jdk-alpine
+FROM openjdk:19-jdk-alpine
 COPY . .
 WORKDIR .
 VOLUME /tmp
