@@ -24,8 +24,15 @@ public class AirController {
 	 
 	   
 	 
+	 @CrossOrigin(origins = "http://airquality-frontend.s3-website-ap-northeast-1.amazonaws.com")
+	    @GetMapping("/")
+	    public String start(){
+	    	return "Welcome";
+	    	}
+	    
+	 
          //find the airquality of particular floor
-	 @CrossOrigin(origins = "http://localhost:4200")
+	 @CrossOrigin(origins = "http://airquality-frontend.s3-website-ap-northeast-1.amazonaws.com")
 	    @GetMapping("floor/{floor}")
 	    public List<airQuality> findByFloor(@PathVariable Integer floor){
 	    	if(!airDBRespository.containsFloor(floor))throw new FloorNotFoundException();
@@ -36,7 +43,7 @@ public class AirController {
 	    }
 
 	    //find the airquality of all floors
-	    @CrossOrigin(origins = "http://localhost:4200")
+	    @CrossOrigin(origins = "http://airquality-frontend.s3-website-ap-northeast-1.amazonaws.com")
 	    @GetMapping("/floor/all")
 	    public List<airQuality> findAll(){
 	    	 logger.info(""+airDBRespository.findAll());

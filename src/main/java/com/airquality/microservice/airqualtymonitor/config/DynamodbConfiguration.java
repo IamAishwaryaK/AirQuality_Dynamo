@@ -17,7 +17,11 @@ import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper;
 
 @Configuration
 public class DynamodbConfiguration{
-	
+//	public static final String SERVICE_ENDPOINT = "https://dynamodb.ap-northeast-1.amazonaws.com";
+//    //public static final String REGION = "";
+//    public static final String ACCESS_KEY = "AKIA6EBEQ6IV6E2IDOFZ";
+//    public static final String SECRET_KEY = "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";
+//	
     @Value("${aws.dynamodb.endpoint}")
     private String dynamoDbEndpoint;
     @Value("${aws.dynamodb.accessKey}")

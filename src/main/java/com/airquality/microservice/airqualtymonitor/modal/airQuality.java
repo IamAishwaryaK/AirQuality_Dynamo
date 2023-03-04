@@ -9,7 +9,7 @@ import java.io.Serializable;
 
 
 
-@DynamoDBTable(tableName = "SaveairqualDB")
+@DynamoDBTable(tableName = "airquality_sensordata")
 public class airQuality implements Serializable {
 
 
@@ -80,6 +80,23 @@ public class airQuality implements Serializable {
 	}
 
 
+	public Integer getIsError() {
+		return isError;
+	}
+
+	public void setIsError(Integer isError) {
+		this.isError = isError;
+	}
+
+	public Integer getIsNull() {
+		return isNull;
+	}
+
+	public void setIsNull(Integer isNull) {
+		this.isNull = isNull;
+	}
+
+
 	private static final long serialVersionUID = 2077992697029525233L;
 	
 	@DynamoDBAttribute(attributeName="timestamp")
@@ -108,6 +125,11 @@ public class airQuality implements Serializable {
 
 	@DynamoDBAttribute(attributeName="sulphurdioxde")
 	private Integer sulphurdioxde;
+	@DynamoDBAttribute(attributeName="isError")
+	private Integer isError;
+	
+	@DynamoDBAttribute(attributeName="isNull")
+	private Integer isNull;
 
 	public String toString()
 	{

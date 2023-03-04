@@ -1,9 +1,10 @@
 package com.airquality.microservice.airqualtymonitor.repository;
 
-import static org.junit.Assert.assertNotNull;
+
 import static org.junit.Assert.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -43,7 +44,7 @@ public class airDBRepositoryTest {
 	@Test
 	public void containsFloor()
 	{
-		int floor=2;
+		int floor=1;
 		boolean aqt=aqr.containsFloor(floor);
 		assertNotNull(aqr.containsFloor(1));
 		logger.info("User  "+true+"  DB  "+aqr.containsFloor(floor));
@@ -59,7 +60,7 @@ public class airDBRepositoryTest {
 		System.out.println(q.getAirqual());
 		Integer check=Integer.valueOf(77);
 		assertNotNull(q.getAirqual());
-		
+//		
 	}
 //	//floor oxygen test
 	@Test
@@ -76,9 +77,10 @@ public class airDBRepositoryTest {
 //	@Test
 //	public void floorCarbon() {
 //		//list.add(aqs);
+//		list=aqr.findAll();
 //	    airQuality aqt=list.get(0);
-//		assertEquals(1,aqt.getCarbon());
+//		assertNotEquals(1,aqt.getCarbon());
 //	}
-//	//check if the floor is present
+	//check if the floor is present
 	
 }

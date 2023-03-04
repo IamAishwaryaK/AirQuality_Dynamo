@@ -50,10 +50,10 @@ public class airDBRespository {
    
     public boolean containsFloor(Integer floor)
 	{
-		if(floor<=0 )
+		if(floor<=0)
 			return false;
 		else if(floor>3)
-		return false;
+		    return false;
 		else 
 			return true;
 		
